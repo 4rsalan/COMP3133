@@ -59,13 +59,14 @@ some of its k consecutive numbers (numbers that follow each other in order.) of 
 const Array_Max_Sum = (nums, k) => {
     let largest = nums[0] + nums[1];
     let current = 0;
-    for (let i = 0; i < nums.length; i++){
-        for(let x = 0; x <= nums.length - k; x++){
-            current = nums[x] + nums[x + 1]
+    for (let i = 0; i <= nums.length - k; i++){
+        for(let x = 0; x < k; x++){
+            current = current + nums[i + x];
         }
         if (current > largest) {
             largest = current;
         }
+        current = 0;
     }
 
     return largest;
