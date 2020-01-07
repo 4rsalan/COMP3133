@@ -11,7 +11,7 @@ console.log(Capitalize("arsalan pikachu yeah"));
 //Write a JavaScript program to find the largest of three given integers.
 const Max = (num1, num2, num3) =>{
   const arr = [num1, num2, num3];
-  return arr.sort()[2];
+  return arr.sort((a,b) => a-b)[2];
 };
 
 console.log(Max (1,0,1));
@@ -58,13 +58,13 @@ some of its k consecutive numbers (numbers that follow each other in order.) of 
  */
 const Array_Max_Sum = (nums, k) => {
     let largest = nums[0] + nums[1];
-    let current = null;
+    let current = 0;
     for (let i = 0; i < nums.length; i++){
         for(let x = 0; x <= nums.length - k; x++){
-            current = nums[x] + nums[x + 1];
-            if (current > largest) {
-                largest = current;
-            }
+            current = nums[x] + nums[x + 1]
+        }
+        if (current > largest) {
+            largest = current;
         }
     }
 
