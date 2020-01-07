@@ -57,7 +57,10 @@ console.log(Angle_Type(180));
 some of its k consecutive numbers (numbers that follow each other in order.) of a given array of positive integers.
  */
 const Array_Max_Sum = (nums, k) => {
-    let largest = nums[0] + nums[1];
+    let largest = 0;
+    for(let y = 0; y < k; y++){
+        largest = largest + nums[y];
+    }
     let current = 0;
     for (let i = 0; i <= nums.length - k; i++){
         for(let x = 0; x < k; x++){
