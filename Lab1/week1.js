@@ -61,7 +61,7 @@ const Array_Max_Sum = (nums, k) => {
     let current = 0;
     for (let i = 0; i < nums.length; i++){
         for(let x = 0; x <= nums.length - k; x++){
-            current = nums[x] + nums[x + 1]
+            console.log(nums[x])
         }
         if (current > largest) {
             largest = current;
