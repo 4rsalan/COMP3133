@@ -10,6 +10,7 @@ greeter(["Randy Savage", "Ric Flair", "Hulk Hogan"]);
 
 const capitalize = str =>{
     let letters = [...str];
+    //letters = [first, ...rest]
     letters[0] = letters[0].toUpperCase();
     return letters.join("");
 };

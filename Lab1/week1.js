@@ -2,7 +2,8 @@
 const Capitalize = query =>{
     const params = query.split(" ");
     return params.map(word =>{
-        return word[0].toUpperCase() + word.substr(1);
+        const [first, ...rest] = word;
+        return first.toUpperCase() + rest.join("");
     });
 };
 
