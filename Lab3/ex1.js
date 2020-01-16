@@ -3,7 +3,16 @@ number as an argument and returns a Promise that tests and rejects if the value 
  */
 
 const compareNumToTen = (num) =>{
-    const p = new Promise((resolve, reject) =>{
-
+    return new Promise((resolve, reject) =>{
+        if (num > 10){
+            resolve(`${num} is greater than 10`)
+        }
+        else{
+            reject(`${num} is not greater than 10`)
+        }
     })
 };
+
+compareNumToTen(8)
+    .then(result => console.log(result))
+    .catch(error => console.log(error));
