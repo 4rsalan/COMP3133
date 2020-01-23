@@ -11,14 +11,15 @@ const delayedPromise = num =>{
     })
 };
 
-delayedPromise(5)
-    .then(r => console.log(r));
-
 const asyncPromise = async num =>{
-    setTimeout(async () =>{
-        return num*num ;
+    setTimeout( () =>{
+        console.log("Async Done");
+        return num*num;
     }, 500);
 };
+
+delayedPromise(5)
+    .then(r => console.log(r));
 
 asyncPromise(6)
     .then(r => console.log(r));
