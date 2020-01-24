@@ -32,5 +32,7 @@ server.listen(8080);
 
 // socket.io, setup
 var io = io.listen(server);
-
 // setup socket listeners here
+io.on("connection", () =>{
+   console.log("New connection");
+});
